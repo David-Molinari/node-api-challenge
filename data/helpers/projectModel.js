@@ -36,6 +36,7 @@ function get(id) {
 }
 
 function insert(project) {
+  console.log(project)
   return db("projects")
     .insert(project, "id")
     .then(([id]) => get(id));

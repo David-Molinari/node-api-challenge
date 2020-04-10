@@ -40,13 +40,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+Express is a web application framework that sits on top of the Node.js web server, making it easier to create web applications. I learned about Express's use of middleware and routing.
+
 - [ ] Describe Middleware?
+
+Middleware functions are able to take request and response objects, perform operations on them, and (when specified) trigger some action. Examples are logging and sercurity. Middleware stack is basically an array of functions. It can change the response or reqest but doesn't have to.
 
 - [ ] Describe a Resource?
 
+A resource is something available to the client that the api helps them manage.
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+A status with the proper code.
+
 - [ ] How can we partition our application into sub-applications?
+
+Using routing and seperate files/folders.
 
 ## Minimum Viable Product
 
