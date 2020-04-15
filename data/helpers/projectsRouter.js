@@ -106,6 +106,6 @@ router.get('/:id/actions', (req, res) => {
     });
 });
 
-router.use('/:id/actions', actionsRouter); //how to pass id param to actionsRouter - then check that router - then I think done
+// router.use('/:id/actions', actionsRouter);
 
 module.exports = router;

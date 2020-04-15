@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.post('/', (req, res) => {
     let object = {
-            project_id: req.params.id,
+            project_id: req.body.project_id,
             description: req.body.description,
             notes: req.body.notes
         }
@@ -25,9 +25,9 @@ router.post('/', (req, res) => {
 
 })
 
-router.put('/', (req, res) => {
+router.put('/:id', (req, res) => {
     let object = {
-        project_id: req.params.id,
+        project_id: req.body.project_id,
         description: req.body.description,
         notes: req.body.notes
     } 
@@ -45,7 +45,7 @@ router.put('/', (req, res) => {
     });
 })
 
-router.delete('/', (req, res) => {
+router.delete('/:id', (req, res) => {
     actionHelpers.remove(req.params.id)
         .then(count => {
         if (count > 0) {
@@ -62,6 +62,5 @@ router.delete('/', (req, res) => {
       });
     });
   });
-
 
 module.exports = router;
